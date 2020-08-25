@@ -1,0 +1,23 @@
+classDiagram
+	PongGame <|-- Function_of_Game
+	PongGame <|-- Theme
+	PongGame <|-- Game_Level
+	PongGame <|-- Player_Profile
+	PongGame : +int age
+	PongGame : +String gender
+	PongGame: +isMammal()
+	PongGame: +mate()
+	class Duck{
+		+String beakColor
+		+swim()
+		+quack()
+	}
+	class Fish{
+		-int sizeInFeet
+		-canEat()
+	}
+	class Zebra{
+		+bool is_wild
+		+run()
+	}
+		
