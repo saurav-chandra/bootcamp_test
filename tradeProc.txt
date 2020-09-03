@@ -1,0 +1,25 @@
+classDiagram
+
+	TradeProcessor -- CSVReader
+	TradeProcessor -- FieldValidator
+	TradeProcessor -- DataMapper
+	TradeProcessor -- Database
+	TradeProcessor -- Statistics
+	TradeProcessor -- CurrencyCodeConvrt
+	TradeProcessor -- Logs
+	
+	TradeProcessor : +int tradeCount
+
+	TradeRecord -- TradeProcessor
+	
+	TradeRecord : +string 	SourceCurrency
+	TradeRecord : +string 	DestinationCurrency
+	TradeRecord : +float 	Lots
+	TradeRecord : +decimal 	Price
+	
+	
+	class CSVReader{
+		+String lines
+		+swim()
+		+quack()
+	}
